@@ -30,7 +30,7 @@ public class TorpedoStore {
   Random generator;
   public boolean fire(int numberOfTorpedos){
     if(numberOfTorpedos < 1 || numberOfTorpedos > this.torpedoCount){
-      println("No");
+        generator=1;
     }
 
     boolean success = false;
