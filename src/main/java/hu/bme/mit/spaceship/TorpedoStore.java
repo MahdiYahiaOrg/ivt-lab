@@ -26,16 +26,16 @@ public class TorpedoStore {
       }
     }
   }
-  Random generator;
+  SecureRandom generator;
   public boolean fire(int numberOfTorpedos){
     if(numberOfTorpedos < 1 || numberOfTorpedos > this.torpedoCount){
-        generator=new Random();
+        generator=new SecureRandom();
     }
 
     boolean success = false;
 
     // simulate random overheating of the launcher bay which prevents firing
-    generator = new Random();
+    generator = new SecureRandom();
     double r = generator.nextDouble();
 
     if (r >= FAILURE_RATE) {
